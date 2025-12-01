@@ -56,6 +56,19 @@ scientist::scientist(string name1, int experience1, int accuracy1, int efficienc
     discoveryPoints = discoverypoints1;
 }
 
+scientist ChooseScientist(int response)
+{
+    if (response == 1)
+        return scientist("Dr.Leo", 5, 500, 500, 1000, 20000);
+    else if (response == 2)
+        return scientist("Dr.Helix", 8, 900, 600, 600, 200000);
+    else if (response == 3)
+        return scientist("Dr.Panthera", 12, 900, 700, 500, 20000);
+    else if (response == 4)
+        return scientist("Dr.Adenine", 7, 600, 500, 900, 20000);
+    else
+        return scientist("Dr.K-mer", 18, 1000, 500, 500, 20000);
+}
 
 
 void greeting(){
