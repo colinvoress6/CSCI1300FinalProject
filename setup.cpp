@@ -12,7 +12,7 @@ int scientist::getExperience(){
 }
 
 void scientist::setExperience(int exp){
-    experience = exp;
+    experience += exp;
 }
 
 int scientist::getAccuracy(){
@@ -20,7 +20,7 @@ int scientist::getAccuracy(){
 }
 
 void scientist::setAccuracy(int acc){
-    accuracy = acc;
+    accuracy += acc;
 }
 
 int scientist::getEfficiency(){
@@ -29,7 +29,7 @@ int scientist::getEfficiency(){
 
 
 void scientist::setEfficiency(int eff){
-    efficiency = eff;
+    efficiency += eff;
 }
 
 int scientist::getInsight(){
@@ -37,7 +37,7 @@ int scientist::getInsight(){
 }
 
 void scientist::setInsight(int ins){
-    insight = ins;
+    insight += ins;
 }
 
 int scientist::getDiscoveryPoints(){
@@ -45,7 +45,7 @@ int scientist::getDiscoveryPoints(){
 }
 
 void scientist::setDiscoveryPoints(int disc){
-    discoveryPoints = disc;
+    discoveryPoints += disc;
 }
 scientist::scientist(string name1, int experience1, int accuracy1, int efficiency1, int insight1, int discoverypoints1){
     name = name1;
@@ -71,6 +71,32 @@ scientist ChooseScientist(int response)
 }
 
 
+void scientist::setPath(int pathType){
+    if (pathType == 0){
+        pathName = "Training Fellowship";
+        setAccuracy(500);
+        setEfficiency(500);
+        setInsight(1000);
+        setDiscoveryPoints(-5000);
+        pathNum = 0;
+    }
+    else{
+        pathName = "Direct Lab Assignment";
+        setDiscoveryPoints(5000);
+        setAccuracy(200);
+        setEfficiency(200);
+        setInsight(200);
+        pathNum = 1;
+    }
+    
+}
+
+string scientist::getPathName(){
+    return pathName;
+}
+int scientist::getPathNum(){
+    return pathNum;
+}
 void greeting(){
     int response;
     cout << "Weclome to Journey Through the Genome press 0 to start:" << endl;
@@ -85,3 +111,38 @@ void greeting(){
     return;
 }
 
+
+string scientist::getMentor(){
+    return mentor;
+}
+
+int scientist::getMentorNum(){
+    return mentorNum;
+}
+
+void scientist::setMentor(int mentorType){
+    if (mentorType == 0){
+        mentor = "none";
+        mentorNum = 0;
+    }
+    else if (mentorType == 1){
+        mentor = "Dr.Aliquot";
+        mentorNum = 1;
+    }
+    else if (mentorType == 2){
+        mentor = "Dr.Assembler";
+        mentorNum = 2;
+    }
+    else if (mentorType == 3){
+        mentor = "Dr.Pop-Gen";
+        mentorNum = 3;
+    }
+    else if (mentorType == 4){
+        mentor = "Dr.Bio-Script";
+        mentorNum = 4;
+    }
+    else{
+        mentor = "Dr.Loci";
+        mentorNum = 5;
+    }
+}

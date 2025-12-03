@@ -7,13 +7,13 @@
 
 class Board {
     private:
-        // Static in this context: Belongs to the class, not each object
+           // Static in this context: Belongs to the class, not each object
         static const int _BOARD_SIZE = 52;
         static const int _MAX_PLAYERS = 2;
-
-        // Composition!
+       
+         // Composition!
         Tile _tiles[2][_BOARD_SIZE];
-
+        
         int _player_count;
         int _player_position[_MAX_PLAYERS];
 
@@ -24,6 +24,7 @@ class Board {
     public:
         // Default Constructor
         Board();
+     
 
         void initializeBoard();
         void displayTrack(int player_index);

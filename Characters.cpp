@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
-#include <fstream>
-#include <iomanip>
-#include <vector>
+
 using namespace std;
 
 #include "setup.cpp"
@@ -29,3 +27,6 @@ void DisplayCharacters(){
 }
 
 
+void DisplayMentors(){
+    cout << "0 = none; 1 = Dr. Aliquot; 2 = Dr. Assembler; 3 = Dr. Pop-Gen; 4 = Dr. Bio-Script; 5 = Dr. Loci"<<endl;
+}
