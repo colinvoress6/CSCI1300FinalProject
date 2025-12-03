@@ -48,6 +48,8 @@ int experience, accuracy, efficiency, insight, discoveryPoints, mentorNum, pathN
 
 };
 
+
+
 void turn(){
     //displays main menu with different options that loop until player presses spin - see the pdf
     //press 0 to spin - rng 1-6
@@ -55,4 +57,5 @@ void turn(){
     //check for in game events
     //trigger events if any
     //update stats if needed
+
 }
