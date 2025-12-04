@@ -13,7 +13,7 @@ class Board {
        
          // Composition!
         Tile _tiles[2][_BOARD_SIZE];
-        
+
         int _player_count;
         int _player_position[_MAX_PLAYERS];
 
@@ -25,7 +25,7 @@ class Board {
         // Default Constructor
         Board();
      
-
+        char getTileColor(int player_index);
         void initializeBoard();
         void displayTrack(int player_index);
         void displayBoard();

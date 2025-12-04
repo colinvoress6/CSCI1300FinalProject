@@ -4,14 +4,17 @@
 
 using namespace std;
 
-int main(){
 
-vector<string> RandomEventDescription(48);
-vector<int> RandomEventPath(48);
-vector<int> MentorNumber(48);
-vector<int> DiscoveryPointGain(48);
+class Random{
+
+public:
+vector<string> RandomEventDescription;
+vector<int> RandomEventPath;
+vector<int> MentorNumber;
+vector<int> DiscoveryPointGain;
 
 
+Random(){
 RandomEventDescription.push_back("A critical DNA sample is contaminated");
 RandomEventDescription.push_back("The main DNA sequencer machine breaks down");
 RandomEventDescription.push_back("Your bioinformatics script has a bug");
@@ -52,7 +55,7 @@ RandomEventDescription.push_back("Dr. Loci is impressed by your deep understandi
 RandomEventDescription.push_back("Dr. Aliquot's protocol tip doubles your DNA yield");
 RandomEventDescription.push_back("Use Dr. Bio-Script's C++ trick to automate a boring data-entry task");
 RandomEventDescription.push_back("Found a calculation error in the lion's genomic database, saving a future analysis");
-RandomEventDescription.push_back("Your data gets added to the main lion conservation databse");
+RandomEventDescription.push_back("Your data gets added to the main lion conservation database");
 RandomEventDescription.push_back("Your data is used to successfully reunite a lost lion cub with its pride");
 RandomEventDescription.push_back("Lab-wide pizza party!");
 RandomEventDescription.push_back("Used Dr. Assembler's workflow to process a whole batch in one afternoon");
@@ -210,14 +213,9 @@ DiscoveryPointGain.push_back(800);
 DiscoveryPointGain.push_back(500);
 DiscoveryPointGain.push_back(600);
 DiscoveryPointGain.push_back(700);
-
-
-
-
-
-
-
-
-
-
 }
+
+};
+
+
+

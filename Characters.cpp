@@ -28,5 +28,16 @@ void DisplayCharacters(){
 
 
 void DisplayMentors(){
-    cout << "1 = Dr. Aliquot; 2 = Dr. Assembler; 3 = Dr. Pop-Gen; 4 = Dr. Bio-Script; 5 = Dr. Loci"<<endl;
+    cout << "(1) Dr. Aliquot - A master of the “wet lab”, assisting in avoiding contamination" <<endl; 
+    cout <<endl;
+    cout << "(2) Dr. Assembler - An expert who helps improve efficiency and streamlines pipelines" << endl;
+    cout <<endl;
+    cout << "(3) Dr. Pop-Gen - A genetics specialist with insight for identifying rare genetic variants" << endl;
+    cout <<endl;
+    cout << "(4) Dr. Bio-Script - The genius behind the data analysis, helps debug code" << endl;
+    cout <<endl;
+    cout << "(5) Dr. Loci - Your biggest supporter assisting you in learning the equipment" << endl;
+
+
+
 }

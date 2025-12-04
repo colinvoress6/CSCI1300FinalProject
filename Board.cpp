@@ -154,6 +154,8 @@ bool Board::movePlayer(int player_index) {
     }
 
     return false;
+
+    
 }
 
 int Board::getPlayerPosition(int player_index) const {
@@ -161,4 +163,8 @@ int Board::getPlayerPosition(int player_index) const {
         return _player_position[player_index];
     }
     return -1;
+}
+
+char Board::getTileColor(int player_index){
+    return _tiles[player_index][_player_position[player_index]].color;
 }
