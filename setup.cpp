@@ -72,7 +72,7 @@ scientist ChooseScientist(int response)
     if (response == 1)
         return scientist("Dr.Leo", 5, 500, 500, 1000, 20000);
     else if (response == 2)
-        return scientist("Dr.Helix", 8, 900, 600, 600, 200000);
+        return scientist("Dr.Helix", 8, 900, 600, 600, 20000);
     else if (response == 3)
         return scientist("Dr.Panthera", 12, 900, 700, 500, 20000);
     else if (response == 4)

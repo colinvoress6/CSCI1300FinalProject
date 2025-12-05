@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -252,6 +253,7 @@ else if(b.getTileColor(playerNum-1) == 'T'){
         cout <<"Incorrect. -300 Accuracy." << endl;
         s.setAccuracy(-300);
     }
+
 }
 
 
@@ -260,8 +262,88 @@ b.displayBoard();
 cout << endl;
 
 
- b.initializeBoard();
+}
 
 
+void ending(scientist s1, scientist s2){
+    ofstream outFile("game_results.txt");
+
+    outFile<<"All scientists have made it to the genome conference! Time to determine the winner." << endl;
+    outFile << "---------- Player 1 -----------" << endl;
+    outFile << "Name:" << s1.getName() << endl;
+    outFile << "Experience: " << s1.getExperience() << endl;
+    outFile << "Accuracy: " << s1.getAccuracy() << endl;
+    outFile << "Efficiency: " << s1.getEfficiency() << endl;
+    outFile << "Insight: " << s1.getInsight() << endl;
+    outFile << "Discovery Points: " << s1.getDiscoveryPoints() << endl;
+    for(int i = 0; i < 5; i++){
+        outFile << endl;
+    }
+
+    outFile << "---------- Player 2 -----------" << endl;
+    outFile << "Name:" << s2.getName() << endl;
+    outFile << "Experience: " << s2.getExperience() << endl;
+    outFile << "Accuracy: " << s2.getAccuracy() << endl;
+    outFile << "Efficiency: " << s2.getEfficiency() << endl;
+    outFile << "Insight: " << s2.getInsight() << endl;
+    outFile << "Discovery Points: " << s2.getDiscoveryPoints() << endl;
+
+    for(int i = 0; i < 5; i++){
+        outFile << endl;
+    }
+
+
+
+int s1Total = s1.getDiscoveryPoints() + (s1.getExperience()/10) + (s1.getAccuracy()/100) + (s1.getEfficiency()/100) + (s1.getInsight()/100);
+int s2Total = s2.getDiscoveryPoints() + (s2.getExperience()/10) + (s2.getAccuracy()/100) + (s2.getEfficiency()/100) + (s2.getInsight()/100);
+
+if(s1Total > s2Total){
+    outFile << "Player 1 is the winner with " << s1Total << " points. Player 2 was close behind, with " << s2Total << "." << endl;
+}
+
+else if(s1Total < s2Total){
+    outFile << "Player 2 is the winner with " << s2Total << " points. Player 1 was close behind, with " << s1Total << "." << endl;
+}
+
+outFile << "Thanks for playing!" << endl;
+outFile <<"-------END GAME ------" << endl;
+
+outFile.close();
+
+ cout<<"All scientists have made it to the genome conference! Time to determine the winner." << endl;
+    cout << "---------- Player 1 -----------" << endl;
+    cout << "Name:" << s1.getName() << endl;
+    cout << "Experience: " << s1.getExperience() << endl;
+    cout << "Accuracy: " << s1.getAccuracy() << endl;
+    cout << "Efficiency: " << s1.getEfficiency() << endl;
+    cout << "Insight: " << s1.getInsight() << endl;
+    cout << "Discovery Points: " << s1.getDiscoveryPoints() << endl;
+    for(int i = 0; i < 5; i++){
+        cout << endl;
+    }
+
+    cout << "---------- Player 2 -----------" << endl;
+   cout << "Name:" << s2.getName() << endl;
+    cout << "Experience: " << s2.getExperience() << endl;
+    cout << "Accuracy: " << s2.getAccuracy() << endl;
+    cout << "Efficiency: " << s2.getEfficiency() << endl;
+    cout << "Insight: " << s2.getInsight() << endl;
+    cout << "Discovery Points: " << s2.getDiscoveryPoints() << endl;
+
+    for(int i = 0; i < 5; i++){
+        cout << endl;
+    }
+
+
+if(s1Total > s2Total){
+    cout << "Player 1 is the winner with " << s1Total << " points. Player 2 was close behind, with " << s2Total << "." << endl;
+}
+
+else if(s1Total < s2Total){
+    cout << "Player 2 is the winner with " << s2Total << " points. Player 1 was close behind, with " << s1Total << "." << endl;
+}
+
+cout << "Thanks for playing!" << endl;
+cout <<"-------END GAME ------" << endl;
 
 }

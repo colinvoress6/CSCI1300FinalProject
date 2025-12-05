@@ -1,0 +1,28 @@
+All scientists have made it to the genome conference! Time to determine the winner.
+---------- Player 1 -----------
+Name:Dr.Leo
+Experience: 22
+Accuracy: -200
+Efficiency: 1300
+Insight: 1200
+Discovery Points: 25500
+
+
+
+
+
+---------- Player 2 -----------
+Name:Dr.Helix
+Experience: 22
+Accuracy: 400
+Efficiency: 2000
+Insight: 800
+Discovery Points: 25700
+
+
+
+
+
+Player 2 is the winner with 25734 points. Player 1 was close behind, with 25525.
+Thanks for playing!
+-------END GAME ------
