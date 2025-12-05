@@ -3,6 +3,7 @@
 using namespace std;
 
 
+
 string scientist::getName(){
     return name;
 }
@@ -54,6 +55,16 @@ scientist::scientist(string name1, int experience1, int accuracy1, int efficienc
     efficiency = efficiency1;
     insight = insight1; 
     discoveryPoints = discoverypoints1;
+}
+
+
+scientist::scientist(){
+    name = "";
+    experience = 0;
+    accuracy = 0;
+    efficiency = 0;
+    insight = 0;
+    discoveryPoints = 0;
 }
 
 scientist ChooseScientist(int response)
@@ -146,3 +157,6 @@ void scientist::setMentor(int mentorType){
         mentorNum = 5;
     }
 }
+
+
+

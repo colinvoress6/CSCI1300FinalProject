@@ -38,6 +38,7 @@ void setMentor(int MentorType);
 
 
 scientist(string name, int experience, int accuracy, int efficiency, int insight, int discoverypoints);
+scientist();
 
 private:
 
