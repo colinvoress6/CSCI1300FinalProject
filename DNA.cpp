@@ -8,7 +8,7 @@ using namespace std;
 double strandSimilarity(){
     int randomChar;
     string randStrand = "";
-   for(int i = 0; i < 6; i++){
+   for(int i = 0; i < 12; i++){
        randomChar = rand() % 4;
     if (randomChar == 0){
         randStrand += "T";
@@ -29,9 +29,9 @@ double strandSimilarity(){
    cin >> response;
 
    int correct = 0;
-   int total = 6;
+   int total = 12;
 
-   for(int k = 0; k < 6; k++){
+   for(int k = 0; k < 12; k++){
         if (response[k] == randStrand[k]){
             correct++;
         }

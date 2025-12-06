@@ -108,19 +108,6 @@ string scientist::getPathName(){
 int scientist::getPathNum(){
     return pathNum;
 }
-void greeting(){
-    int response;
-    cout << "Weclome to Journey Through the Genome press 0 to start:" << endl;
-    cin >> response; 
-    while (response !=0){
-        cin.clear();
-        cout << "Weclome to Journey Through the Genome press 0 to start:" << endl;
-        cin >> response;
-    }
-
-
-    return;
-}
 
 
 string scientist::getMentor(){
